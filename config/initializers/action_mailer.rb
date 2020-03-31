@@ -10,7 +10,6 @@
 #   ActionMailer is setup in test mode later on
 #
 unless Rails.env.test?
-
   smtp_settings = Setting.smtp || {}
 
   if smtp_settings["address"].present?

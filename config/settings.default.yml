@@ -39,7 +39,7 @@
 #
 # :host: "www.example.com"
 #
-:host: ""
+:host: "localhost:3000"
 
 
 # Base URL
@@ -59,20 +59,20 @@
 #------------------------------------------------------------------------------
 # Default locale is American English.
 #
-:locale: "en-US"
+:locale: "es-MX"
 
 
 # Settings for outgoing email (SMTP)
 # Uncomment to set up for your specific mailer
 #------------------------------------------------------------------------------
-#:smtp:
-  #:address                    : ""        # e.g. smtp.gmail.com
-  #:from                       : ""        # e.g. no-reply@your-domain.com
-  #:enable_starttls_auto       : true
-  #:port                       : "587"
-  #:authentication             : :plain
-  #:user_name                  : ""
-  #:password                   : ""
+:smtp:
+  :address                    : "smtp.gmail.com"        # e.g. smtp.gmail.com
+  :from                       : "vbalderas1991@gmail.com"        # e.g. no-reply@your-domain.com
+  :enable_starttls_auto       : true
+  :port                       : "587"
+  :authentication             : :plain
+  :user_name                  : "vbalderas1991@gmail.com"
+  :password                   : "666mmkoRn"
 
 # Settings for the Email dropbox (IMAP)
 # - Connection settings for the IMAP account, server and folders.

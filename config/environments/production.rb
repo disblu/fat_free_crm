@@ -14,7 +14,7 @@ if defined?(FatFreeCRM::Application)
     config.cache_classes = true
 
     # Full error reports are enabled, since this is an internal application.
-    config.consider_all_requests_local       = false
+    config.consider_all_requests_local       = true
     # Caching is turned on
     config.action_controller.perform_caching = true
 

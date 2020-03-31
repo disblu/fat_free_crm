@@ -6,7 +6,7 @@
 # See MIT-LICENSE file or http://www.opensource.org/licenses/mit-license.php
 #------------------------------------------------------------------------------
 class EntityObserver < ActiveRecord::Observer
-  observe :account, :contact, :lead, :opportunity
+  observe :account, :contact, :lead, :opportunity, :task
 
   def after_create(item)
     send_notification_to_assignee(item) if current_user != item.assignee
@@ -36,7 +36,7 @@ class EntityObserver < ActiveRecord::Observer
     user_id_or_user = PaperTrail.whodunnit
     if user_id_or_user.is_a?(User)
       user_id_or_user
-    elsif user_id_or_user.is_a?(String)
+    elsif user_id_or_user.is_a?(String) || user_id_or_user.is_a?(Integer)
       User.find_by_id(user_id_or_user.to_i)
     end
   end
